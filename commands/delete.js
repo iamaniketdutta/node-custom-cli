@@ -1,14 +1,23 @@
-const Notes = require('../dbHandlers/notesDb');
+const {Notes} = require('../dbHandlers/notesDb');
 const chalk = require('chalk');
 const logger = require('../logger');
 
+
+/**
+ * 
+ * @param {boolean} multi Multi optional for delete all records
+ * @param {object} args Arguments type with value for del sub-command
+ */
 async function del (multi, args) {
     try {
+        // curating delete condition object
         const delCondition = {name : args.name};
         let notesDelRecords;
         if (multi) {
+            // delete all records as per delCondition
             notesDelRecords = await Notes.deleteMany(delCondition);
         } else {
+            // delete the first matched record as per delCondition
             notesDelRecords = await Notes.deleteOne(delCondition)
         }
         const deletedCount = notesDelRecords.deletedCount;

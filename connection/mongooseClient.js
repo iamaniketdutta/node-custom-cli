@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const config = require('../conf/config');
 const logger = require('../logger');
 
+
+/**
+ * Configure Mongoose => connect, listen to mongoose(MongoDB's wrapper)
+ */
 exports.configure = async () => {
     try {
         const connectionOption = {

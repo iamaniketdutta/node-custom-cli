@@ -1,10 +1,17 @@
-const Notes = require('../dbHandlers/notesDb');
+const {Notes} = require('../dbHandlers/notesDb');
 const chalk = require('chalk');
 const logger = require('../logger');
 
+
+/**
+ * 
+ * @param {object} args Arguments type with value for add sub-command
+ */
 async function add (args) {
     try {
+        // creating data object to be added to notes collection
         const addData = {name : args.name, notes : args.notes};
+        // awaiting db transaction for saving the data
         const notesRecords = await Notes(addData).save();
         //display message to user
         if(typeof notesRecords !== 'undefined' && notesRecords.name) {

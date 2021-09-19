@@ -1,10 +1,15 @@
 const { createLogger, format, transports, config } = require('winston')
 const { combine, timestamp, printf } = format;
 
+
+/**
+ * Return the custom log format
+ */
 const myFormat = printf(({ level, message, timestamp }) => {
     return `${timestamp} [${level}]: ${message}`;
 });
 
+// Configuring the logger options for file transport
 const options = {
   file: {
     filename: `${__dirname}/logs/app.log`,
@@ -15,6 +20,7 @@ const options = {
   }
 };
 
+// Creating logger instance with various options like transports, levels 
 const logger = createLogger({
   levels: config.npm.levels,
   format: combine(
@@ -27,4 +33,4 @@ const logger = createLogger({
   exitOnError: false
 })
 
-module.exports = logger
+module.exports = logger;

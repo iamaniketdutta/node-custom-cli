@@ -1,6 +1,7 @@
 const env = 'dev';
 
-let path = {
+// This works like custom environment
+const path = {
     dev: './dev.json',
 }[env];
 

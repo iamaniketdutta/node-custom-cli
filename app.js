@@ -59,13 +59,19 @@ program
     // function to execute when command is uses
     .action(del)
 
-// allow commander to parse, by-default `process.argv`
+// allow commander to parse the commands, arguments, and defaults to `process.argv`
 program.parse();
 
+/**
+ * Logs the error on uncaughtException
+ */
 process.on('uncaughtException', (err) => {
     logger.error('Uncaught exception', err)
 })
-  
+
+/**
+ * Logs the error on unhandledRejection
+ */
 process.on('unhandledRejection', (err) => {
     logger.error('unhandled rejection', err)
 })

@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const codes = require('../conf/codes.json');
 
+
+// Creating mongoose pre-defined schema with the validation
 const notesSchema = new mongoose.Schema(
     {
         name: {type: String, required: true, index: true},
@@ -11,4 +13,6 @@ const notesSchema = new mongoose.Schema(
     }
 );
 
+// Creating mongoose model with the notesSchema
+// Name: 'notes' will be used as collection name
 exports.Notes = new mongoose.model('notes', notesSchema);
