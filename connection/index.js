@@ -1,0 +1,1 @@
+exports.mongooseClient = require('./mongooseClient');
