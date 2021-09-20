@@ -1,6 +1,7 @@
 const {Notes} = require('../dbHandlers/notesDb');
 const chalk = require('chalk');
 const logger = require('../logger');
+const {exit} = require('../utility/utils');
 
 
 /**
@@ -33,6 +34,8 @@ async function del (multi, args) {
         }
     } catch (err) {
         logger.error("Unknown error: " + err)
+    } finally {
+        exit();
     }
 };
 

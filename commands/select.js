@@ -2,6 +2,7 @@ const {Notes} = require('../dbHandlers/notesDb');
 const chalk = require('chalk');
 const codes = require('../conf/codes.json');
 const logger = require('../logger');
+const {exit} = require('../utility/utils');
 
 
 /**
@@ -31,6 +32,8 @@ async function select (args) {
         }
     } catch (err) {
         logger.error("Unknown error: " + err)
+    } finally {
+        exit();
     }
 };
 

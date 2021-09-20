@@ -1,0 +1,1 @@
+exports.exit = () => process.exit();
