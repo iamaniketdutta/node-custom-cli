@@ -1,12 +1,13 @@
 <p align="center">
-  <h2 align="center">Notes CLI</h2>
+  <h3 align="center">Notes CLI</h3>
   <p align="center">A CLI to store, remove, find notes in the terminal.<p>
   <p align="center">
     <img  src="https://img.shields.io/badge/license-MIT-green">
    <img  src="https://img.shields.io/badge/build-passing-brightgreen">
    <img  src="https://img.shields.io/badge/version-1.0.0-orange">
    <img  src="https://img.shields.io/badge/npm-v6.12.1-blue">
-    <a href="https://www.linkedin.com/in/iamaniketdutta/" target="_blank"><img src="https://img.shields.io/badge/chat"></a>
+   <img  src="https://img.shields.io/badge/node-v12.13.1-yellow">
+    <a href="https://www.linkedin.com/in/iamaniketdutta/"><img src="https://img.shields.io/badge/chat-LinkedIn-blue"></a>
   </p>
   <br>
 </p>
@@ -18,11 +19,9 @@
 
 node-custom-cli is a bit mature now, yet missing several important features:
 
- - Improves user-interface.
+ - Improved user-interface.
  - Security Layer.
  - More interactive features.
-
-Feel free to share your [thoughts](##Find me here).
 
 ## Installation
 
@@ -59,22 +58,20 @@ Commands:
   help [command]                display help for command
 
 ~$ notes add --name myNote --notes="Need to go prepare estimation before the meeting tomorrow"
-```diff + Notes has been added successfully!```
+Notes has been added successfully!
 
 ~$ notes list --name="my"
-```diff 
-+ NAME: myNote
-+ NOTES: Need to go prepare estimation before the meeting tomorrow
-+ ST-ATUS: 10
-+ CREATEDAT: 1632127860807
-+ UPDATEDAT: 1632127860807
-```
+NAME: myNote
+NOTES: Need to go prepare estimation before the meeting tomorrow
+STATUS: 10
+CREATEDAT: 1632127860807
+UPDATEDAT: 1632127860807
 
 ~$ notes del --name myNote
-```diff + Single notes with name: 'myNote' has been deleted successfully!```
+Single notes with name: 'myNote' has been deleted successfully!
 
 ~$ notes list --name myNote
-```diff - You don't have any notes.```
+You don't have any notes.
 
 ```
 ### Commands
@@ -101,7 +98,7 @@ If you encounter any problems feel free to open an [issue](https://github.com/ia
 
 ## 🗒️ License
 
-**COVID-19 Updates Telegram Bot** is licensed under `MIT license`.
+**Notes CLI** is licensed under `MIT license`.
 
 ## 👦🏼 Find me here
 * [Linkedin](https://www.linkedin.com/in/iamaniketdutta)
