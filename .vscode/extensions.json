@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "sdras.night-owl",
+        "formulahendry.auto-rename-tag",
+        "coenraads.bracket-pair-colorizer-2",
+        "streetsidesoftware.code-spell-checker",
+        "aaron-bond.better-comments",
+        "wix.vscode-import-cost",
+        "esbenp.prettier-vscode"
+    ]
+}
